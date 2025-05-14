@@ -22,3 +22,5 @@ export * from './pages/PageBase';
 export * from './store/AuthStore';
 export * from './store/UsuariosStore';
 export * from './hooks/ProtectedRoute';
+export * from './components/organismos/formularios/InputTetx';
+export * from './components/organismos/FooterLogin';

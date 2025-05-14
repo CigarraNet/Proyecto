@@ -18,7 +18,7 @@ export function Sidebar({ state, setState }) {
       <Container $isopen={state.toString()} className={state ? "active" : ""}>
         <div className="Logocontent">
           <div className="imgcontent">
-            <img src={variables.logo} alt="logo" style={{ filter:  "brightness(0) saturate(100%) invert(85%) sepia(81%) saturate(748%) hue-rotate(8deg) brightness(104%) contrast(101%)" }} />
+            <img src={variables.logo} alt="logo" style={{ filter: "brightness(0) saturate(100%) invert(100%)" }} />
           </div>
           <h2>Cigarra.Net</h2>
         </div>
