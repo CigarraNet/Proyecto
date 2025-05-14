@@ -5,6 +5,7 @@ import { createContext, useState } from 'react';
 import { Device } from './styles/breackpoints';
 import { Light, Dark } from './styles/themes';
 import { MenuHambur, Sidebar } from './index'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 export const ThemeContext = createContext(null);
 
 
@@ -29,6 +30,7 @@ function App() {
                 <MyRoutes/>
               </section>
             </Container>
+            <ReactQueryDevtools initialIsOpen={false} />
           </AuthContextProvider>
         </ThemeProvider>
       </ThemeContext.Provider>
