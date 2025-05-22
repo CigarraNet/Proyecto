@@ -18,7 +18,7 @@ export function Sidebar({ state, setState }) {
       <Container $isopen={state.toString()} className={state ? "active" : ""}>
         <div className="Logocontent">
           <div className="imgcontent">
-            <img src={variables.logo} alt="logo" style={{ filter: "brightness(0) saturate(100%) invert(100%)" }} />
+            <img src={variables.logo} alt="logo" style={{ filter: "brightness(0)  invert(1)" }} />
           </div>
           <h2>Cigarra.Net</h2>
         </div>
@@ -66,7 +66,7 @@ export function Sidebar({ state, setState }) {
 }
 const Container = styled.div`
   color: ${(props) => props.theme.text};
-  background: ${(props) => props.theme.bg};
+  background-color: #262626;
   position: fixed;
   padding-top: 20px;
   z-index: 1;
@@ -127,7 +127,7 @@ const Container = styled.div`
     padding: 0 5%;
     position: relative;
     &:hover {
-      background: ${(props) => props.theme.bgAlpha};
+      background: #f1c40f;
     }
     .Links {
       display: flex;
@@ -151,13 +151,13 @@ const Container = styled.div`
         opacity: 0;
       }
       &.active {
-        color: ${(props) => props.theme.bg5};
+        color: #f1c40f;
         font-weight:600;
         &::before {
           content: "";
           position: absolute;
           height: 100%;
-          background: ${(props) => props.theme.bg5};
+          background: #f1c40f;
           width: 4px;
           border-radius: 10px;
           left: 0;
@@ -177,7 +177,7 @@ const Main = styled.div`
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: ${(props) => props.theme.bgtgderecha};
+    background: #f1c40f;
     box-shadow: 0 0 4px ${(props) => props.theme.bg3},
       0 0 7px ${(props) => props.theme.bg};
     display: flex;
@@ -188,7 +188,7 @@ const Main = styled.div`
     z-index: 2;
     transform: ${({ $isopen }) =>
       $isopen==="true" ? `translateX(162px) rotate(3.142rad)` : `initial`};
-    color: ${(props) => props.theme.text};
+    color: #000;
   }
 `;
 const Divider = styled.div`

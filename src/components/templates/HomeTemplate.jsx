@@ -1,20 +1,44 @@
 import styled from "styled-components";
 import { Btnsave, useAuthStore } from "../../index"
 export function HomeTemplate() {
-    const {signOut} = useAuthStore();
-    return (<Container>
-    <h1>Home template</h1>
-    <Btnsave titulo="Cerrar sesion" 
-    bgcolor="#fff" funcion={signOut}/>
-    </Container>);
+    
+    return (
+        <Container>
+            <header className="header">
+
+            </header>
+            <section className="are1">
+
+            </section>
+            <section className="area2">
+
+            </section>
+            <section className="main">
+
+            </section>
+        </Container>
+    )
 }
 const Container = styled.div`
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+
     height: 100vh;
-    overflow hidden;
+    width:100%;
     background-color:${(props)=>props.theme.bgtotal};
     color: ${({theme})=>theme.text};
-    width: 100%;
+    display:grid;
+    grid-template:
+    "header" 100px
+    "area1" 100px
+    "area2" 100px
+    "main" auto
+    ;
+    .header{
+        background-color: rgba(103, 93, 241, 0.14);
+    }
+    .area1{
+    }
+    .area2{
+    }
+    .main{
+    }
 `;

@@ -23,7 +23,7 @@ export const Light ={
     primary: "rgb(52, 131, 235)",
     bg4:"#eaeaea",
     bg5:"#f76f3a",
-    bgtotal:"#EDF3FB",
+    bgtotal:"#1C1C1E",
     bgtgderecha:"#eeeeee",
     colorToggle:"#F9743B",
     translateToggle:"-12px",

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Btnsave, variables, useAuthStore, InputText, FooterLogin } from "../../index";
+import { Btnsave, variables, useAuthStore, InputText, FooterLogin, RegistrarAdmin } from "../../index";
 import { Device } from "../../styles/breackpoints";
 import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -30,7 +30,7 @@ export function LoginTemplate() {
       pass: data.pass,
     });
     if (response) {
-      navigate("/");
+      navigate("/home");
     } else {
       setStateInicio(true);
     }
@@ -48,6 +48,9 @@ export function LoginTemplate() {
 
       <div className="contentCard">
         <div className="card">
+          {
+            state && <RegistrarAdmin setState={()=>setState(!state)}/>
+          }
           <Titulo>Cigarra.Net</Titulo>
           <p className="frase">Controla tu inventario.</p>
           {stateInicio && <TextoStateInicio>Datos incorrectos</TextoStateInicio>}
@@ -62,7 +65,7 @@ export function LoginTemplate() {
                   required: true,
                 })}
               />
-              <label className="form__label">email</label>
+              <label className="form__label">Email</label>
             </InputText>
             <InputText icono={<MdLock />}>
               <input

@@ -1,6 +1,5 @@
 export { default as App } from './App';
 export * from './context/AuthContext';
-export * from './main';
 export * from './styles/breackpoints';
 export * from './styles/themes';
 export * from './styles/variables';
@@ -24,3 +23,4 @@ export * from './store/UsuariosStore';
 export * from './hooks/ProtectedRoute';
 export * from './components/organismos/formularios/InputTetx';
 export * from './components/organismos/FooterLogin';
+export * from './components/organismos/formularios/RegistrarAdmin'
