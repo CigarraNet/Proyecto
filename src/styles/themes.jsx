@@ -1,7 +1,7 @@
 export const Light ={
      rgbafondoanimado:"rgba(102, 102, 102, 0.2)",
     body: "#fff",  
-    text: "#202020",
+    text: "#000",
     bodyRgba: "255, 255, 255",
     textRgba: "32,32,32",
     carouselColor: "#9955ff",

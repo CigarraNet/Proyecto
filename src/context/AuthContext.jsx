@@ -11,6 +11,7 @@ export const AuthContextProvider =({children})=>{
                 if(session?.user==null){
                     setUser(null)
                 }else{
+                    console.log("date del usuario", session?.user)
                     setUser(session?.user)
 
                 }
