@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Btnsave, Header, useAuthStore } from "../../index"
 import { useState } from "react";
-export function PlantillaBase() {
+export function MarcaTemplate() {
     const [state, setState] = useState(false);
     return (
         <Container>

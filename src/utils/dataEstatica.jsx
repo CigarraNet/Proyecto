@@ -53,16 +53,7 @@ export const SecondarylinksArray = [
 ];
 //temas
 export const TemasData = [
-  {
-    icono: "🌞",
-    descripcion: "light",
-   
-  },
-  {
-    icono: "🌚",
-    descripcion: "dark",
-    
-  },
+ 
 ];
 
 //data configuracion
@@ -70,36 +61,36 @@ export const DataModulosConfiguracion =[
   {
     title:"Productos",
     subtitle:"registra tus productos",
-    icono:"https://i.ibb.co/85zJ6yG/caja-del-paquete.png",
+    icono: "https://cdn-icons-png.flaticon.com/512/4592/4592866.png",
     link:"/configurar/productos",
    
   },
   {
     title:"Personal",
     subtitle:"ten el control de tu personal",
-    icono:"https://i.ibb.co/5vgZ0fX/hombre.png",
+    icono:"https://cdn-icons-png.flaticon.com/512/3128/3128612.png",
     link:"/configurar/usuarios",
    
   },
 
   {
-    title:"Tu empresa",
+    title:"Tu negocio",
     subtitle:"configura tus opciones básicas",
-    icono:"https://i.ibb.co/x7mHPgm/administracion-de-empresas.png",
+    icono:"https://cdn-icons-png.flaticon.com/512/1198/1198412.png",
     link:"/configurar/empresa",
     
   },
   {
     title:"Categoria de productos",
     subtitle:"asigna categorias a tus productos",
-    icono:"https://i.ibb.co/VYbMRLZ/categoria.png",
+    icono:"https://cdn-icons-png.flaticon.com/512/1312/1312256.png",
     link:"/configurar/categorias",
     
   },
   {
     title:"Marca de productos",
     subtitle:"gestiona tus marcas",
-    icono:"https://i.ibb.co/1qsbCRb/piensa-fuera-de-la-caja.png",
+    icono:"https://cdn-icons-png.flaticon.com/512/1253/1253360.png",
     link:"/configurar/marca",
    
   },

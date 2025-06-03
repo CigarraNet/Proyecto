@@ -1,21 +1,23 @@
 import styled from "styled-components";
 import { variables } from "../../styles/variables";
 import { CardDatosNegocio } from "../moleculas/CardDatosNegocio";
+import { useEmpresaStore } from "../../store/EmpresaStore";
 export function BannerEmpresa() {
+    const {dataempresa,contadorusuarios} = useEmpresaStore();
     return (<Container>
         <div className="content-wrapper-context">
         <span className="titulo">
             {<variables.iconoempresa/>}
-            Nombre de negocio
+            {dataempresa.empresa?.nombre}
         </span>  
         <div className="content-text">
             Cigarra.Net siempre te esta informando.            
         </div>    
         <ContentCards>
             <CardDatosNegocio titulo="Moneda"
-            valor="COP/."/>
+            valor={dataempresa.empresa?.simbolomoneda}/>
             <CardDatosNegocio titulo="Usuarios"
-            valor="100"/>
+            valor={contadorusuarios}/>
         </ContentCards>    
         </div>
     </Container>);
