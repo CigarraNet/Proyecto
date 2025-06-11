@@ -78,6 +78,7 @@ export function MyRoutes(){
         <Route path="stock-bajo-minimo" element={<StockBajoMinimo/>}/>
         <Route path="control-entradas-salidas" element={<ControlEntradasSalidas/>}/>
       </Route>
+            
 </Routes>
     )
 }

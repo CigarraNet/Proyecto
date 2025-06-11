@@ -183,7 +183,7 @@ export function RegistrarUsuarios({ onClose, dataSelect, accion }) {
               )}
             </ContainerSelector>
             <article>
-              <InputText icono={<variables.iconostock />}>
+              <InputText icono={<variables.iconodoc/>}>
                 <input
                   className="form__field"
                   defaultValue={dataSelect.nu_documento}
@@ -199,7 +199,7 @@ export function RegistrarUsuarios({ onClose, dataSelect, accion }) {
               </InputText>
             </article>
             <article>
-              <InputText icono={<variables.iconostockminimo />}>
+              <InputText icono={<variables.iconophone/>}>
                 <input
                   step="0.01"
                   className="form__field"
@@ -216,7 +216,7 @@ export function RegistrarUsuarios({ onClose, dataSelect, accion }) {
               </InputText>
             </article>
             <article>
-              <InputText icono={<variables.iconocodigobarras />}>
+              <InputText icono={<variables.iconoaddress/>}>
                 <input
                   className="form__field"
                   defaultValue={dataSelect.direccion}

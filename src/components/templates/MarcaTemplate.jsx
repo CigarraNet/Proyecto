@@ -28,7 +28,7 @@ export function MarcaTemplate({data}) {
             <section className="area1">
                 <ContentFiltro>
                     <Title>
-                        Marcas
+                        Proveedores
                     </Title>
                     <Btnfiltro funcion={nuevoRegistro} bgcolor={"#f6f3f3"} textcolor={"353535"} icono={<variables.agregar/>}/>
                 </ContentFiltro>

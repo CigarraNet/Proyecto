@@ -14,8 +14,6 @@ export function BannerEmpresa() {
             Cigarra.Net siempre te esta informando.            
         </div>    
         <ContentCards>
-            <CardDatosNegocio titulo="Moneda"
-            valor={dataempresa.simbolomoneda}/>
             <CardDatosNegocio titulo="Usuarios"
             valor={contadorusuarios}/>
         </ContentCards>    

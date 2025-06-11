@@ -13,7 +13,7 @@ export function HomeTemplate() {
 
             </header>
             <section className="area1">
-                <Title>Tu negoció</Title>
+                <Title>BIENVENIDO</Title>
             </section>
             <section className="main">
                 <BannerEmpresa/>

@@ -44,8 +44,14 @@ import {TbBrandBitbucket} from "react-icons/tb"
 import {MdOutlineCategory} from "react-icons/md"
 import { BsShop } from "react-icons/bs";
 import {TbReportAnalytics} from "react-icons/tb"
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaAddressCard } from "react-icons/fa";
+import { PiAddressBookTabsFill } from "react-icons/pi";
 export const variables = {
   iconoreportes : TbReportAnalytics,
+  iconophone : FaPhoneAlt,
+  iconoaddress : FaAddressCard,
+  iconodoc: FaAddressCard,
   iconoempresa:BsShop,
   iconocategorias:MdOutlineCategory,
   iconomarca:TbBrandBitbucket,

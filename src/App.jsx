@@ -5,6 +5,9 @@ import { createContext, useState } from 'react';
 import { Device } from './styles/breackpoints';
 import { Light, Dark } from './styles/themes';
 
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { useLocation} from "react-router-dom"
+
 export const ThemeContext = createContext(null);
 
 
