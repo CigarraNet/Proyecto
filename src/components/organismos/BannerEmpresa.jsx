@@ -8,14 +8,14 @@ export function BannerEmpresa() {
         <div className="content-wrapper-context">
         <span className="titulo">
             {<variables.iconoempresa/>}
-            {dataempresa.empresa?.nombre}
+            {dataempresa.nombre}
         </span>  
         <div className="content-text">
             Cigarra.Net siempre te esta informando.            
         </div>    
         <ContentCards>
             <CardDatosNegocio titulo="Moneda"
-            valor={dataempresa.empresa?.simbolomoneda}/>
+            valor={dataempresa.simbolomoneda}/>
             <CardDatosNegocio titulo="Usuarios"
             valor={contadorusuarios}/>
         </ContentCards>    
@@ -41,7 +41,7 @@ const Container =styled.div`
         display: flex; 
         flex-direction: column;
         .titulo{
-            font-size: 30px;
+            font-size: 50px;
             font-weight: 700;
             gap: 10px; 
             display: flex; 
@@ -49,7 +49,7 @@ const Container =styled.div`
         }
         .content-text{
             font-weight: 400;
-            font-size: 14px;
+            font-size: 20px;
             line-height: 1.7em;
             color: #ebecec;
             display: -webkit-box;

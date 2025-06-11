@@ -1,10 +1,24 @@
 import styled from "styled-components";
-import { Btnsave, Header, useAuthStore } from "../../index"
+import { Btnsave, Buscador, ContentFiltro, Header, RegistrarMarca, TablaMarca, Title, useAuthStore, useMarcaStore, variables} from "../../index"
 import { useState } from "react";
-export function MarcaTemplate() {
+import { Btnfiltro } from "../moleculas/Btnfiltro";
+export function MarcaTemplate({data}) {
     const [state, setState] = useState(false);
+    const [dataSelect, setdataSelect] = useState([]);
+    const [accion, setAccion] = useState("");
+    const [openRegistro, SetopenRegistro] = useState(false);
+    const nuevoRegistro=()=>{
+        SetopenRegistro(!openRegistro);
+        setAccion("Nuevo")
+        setdataSelect([])
+    }
+    const {setBuscador} = useMarcaStore();
     return (
         <Container>
+            {
+                openRegistro && <RegistrarMarca dataSelect={dataSelect} accion={accion} onClose={()=>SetopenRegistro(!openRegistro)}/> 
+            }
+
             <header className="header">
                 <Header
                     stateConfig={{ state: state, setState: () => setState(!state) }}
@@ -12,20 +26,27 @@ export function MarcaTemplate() {
 
             </header>
             <section className="area1">
-
+                <ContentFiltro>
+                    <Title>
+                        Marcas
+                    </Title>
+                    <Btnfiltro funcion={nuevoRegistro} bgcolor={"#f6f3f3"} textcolor={"353535"} icono={<variables.agregar/>}/>
+                </ContentFiltro>
+                
             </section>
             <section className="area2">
-
+                <Buscador setBuscador={setBuscador}/>
             </section>
             <section className="main">
-
+                <TablaMarca data={data} SetopenRegistro={SetopenRegistro}
+                setdataSelect={setdataSelect} setAccion={setAccion}/>
             </section>
         </Container>
     )
 }
 const Container = styled.div`
 
-    height: 100vh;
+    min-height: 100vh;
     width:100%;
     background-color:${(props)=>props.theme.bgtotal};
     color: ${({theme})=>theme.text};
@@ -39,25 +60,26 @@ const Container = styled.div`
     ;
     .header{
         grid-area:header;
-        background-color: rgba(103, 93, 241, 0.14);
+        /*background-color: rgba(103, 93, 241, 0.14);*/
         display: flex;
         align-items: center;
     }
     .area1{
         grid-area:area1;
-        background-color:rgba(229, 67, 26, 0.14);
+        /*background-color:rgba(229, 67, 26, 0.14);*/
         display: flex;
         align-items: center;
     }
     .area2{
         grid-area:area2;
-        background:rgba(77, 237, 106, 0.14);
+        /*background:rgba(77, 237, 106, 0.14);*/
         display: flex;
         align-items: center;
+        justify-content: end;
     }
     .main{
         grid-area:main;
-        background:rgba(179, 46, 241, 0.14);
+        /*background:rgba(179, 46, 241, 0.14);*/
         display: flex;
         align-items: center;
     }

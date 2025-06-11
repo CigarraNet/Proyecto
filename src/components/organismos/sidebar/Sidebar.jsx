@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {
   LinksArray,
   SecondarylinksArray,
-  SidebarCard,
   ToggleTema,
 } from "../../../index";
 import {variables} from "../../../styles/variables"
@@ -18,7 +17,7 @@ export function Sidebar({ state, setState }) {
       <Container $isopen={state.toString()} className={state ? "active" : ""}>
         <div className="Logocontent">
           <div className="imgcontent">
-            <img src={variables.logo} alt="logo" style={{ filter: "brightness(0)  invert(1)" }} />
+            {<variables.iconoempresa/>}
           </div>
           <h2>Cigarra.Net</h2>
         </div>
@@ -59,7 +58,7 @@ export function Sidebar({ state, setState }) {
         ))}
         <ToggleTema/>
         <Divider />
-        {state && <SidebarCard />}
+        
       </Container>
     </Main>
   );

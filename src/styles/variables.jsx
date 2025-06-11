@@ -13,7 +13,12 @@ import { FaReact } from "react-icons/fa";
 import { BsArrowDown, BsArrowUpShort } from "react-icons/bs";
 import { FaBalanceScale } from "react-icons/fa";
 import logo from "../assets/mercado.png";
-import hogar from "../assets/hogar.png"
+import hogar from "../assets/hogar.png";
+import Produc from "../assets/Produc.svg";
+import Personal from "../assets/Personal.svg";
+import Tunegocio from "../assets/Tunegocio.svg";
+import Mproductos from "../assets/Mproductos.svg";
+import Categori from "../assets/Categorias.svg";
 import { BsGoogle } from "react-icons/bs";
 import { RiCloseLine } from "react-icons/ri";
 import { BiSave } from "react-icons/bi";
@@ -37,11 +42,11 @@ import {FaRegMoneyBillAlt} from "react-icons/fa"
 import {CiMoneyBill} from "react-icons/ci"
 import {TbBrandBitbucket} from "react-icons/tb"
 import {MdOutlineCategory} from "react-icons/md"
-import {FaBuilding} from "react-icons/fa"
+import { BsShop } from "react-icons/bs";
 import {TbReportAnalytics} from "react-icons/tb"
 export const variables = {
   iconoreportes : TbReportAnalytics,
-  iconoempresa:FaBuilding,
+  iconoempresa:BsShop,
   iconocategorias:MdOutlineCategory,
   iconomarca:TbBrandBitbucket,
   iconoprecioventa:FaRegMoneyBillAlt,
@@ -95,6 +100,11 @@ export const variables = {
   balance: FaBalanceScale,
   logo: logo,
   hogar: hogar,
+  Produc: Produc,
+  Personal: Personal,
+  Tunegocio: Tunegocio,
+  Mproductos: Mproductos,
+  Categori: Categori,
   iconogoogle: BsGoogle,
   iconocerrar: RiCloseLine,
   iconoguardar: BiSave,

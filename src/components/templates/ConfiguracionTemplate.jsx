@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {  Link } from "react-router-dom";
 import { DataModulosConfiguracion } from "../../utils/dataEstatica";
+import { Mensaje } from "../moleculas/Mensaje";
 export function ConfiguracionTemplate() {
   
   return (
@@ -9,12 +10,12 @@ export function ConfiguracionTemplate() {
       <div id="cards">
         {DataModulosConfiguracion.map((item, index) => {
           return (
-            <Link to={item.link} className={item.state?"card": "card false"} key={index}>
+            <Link to={item.state?item.link:""} className={item.state?"card": "card false"} key={index}>
 
-            
+              <Mensaje state={item.state}/>
               <div class="card-content">
                 <div class="card-image">
-                  <img src={item.icono} />
+                  <img src={item.icono}/>
                 </div>
        
 
@@ -157,17 +158,17 @@ const Container = styled.div`
   }
 
   .card-image {
-    align-items: center;
-    display: flex;
-    height: 140px;
-    justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 150px;
+  justify-content: center;
 
-    img {
-      transition: 0.3s;
-      height: 70%;
-      filter: grayscale(100%);
-    }
+  img {
+    transition: 0.3s;
+    height: 110%;
+    filter: grayscale(100%);
   }
+}
 
   .card-info-wrapper {
     align-items: center;
