@@ -8,12 +8,16 @@ export function ReportesTemplate() {
                    <Outlet/>  
                 </Content>
             <Sidebar>
-                <SidebarSeccion>
+                <SidebarSection>
                     <SidebarTitle>Stock Actual</SidebarTitle>
                     <SidebarItem to="stock-actual-por-producto">Por producto</SidebarItem>
                     <SidebarItem to="stock-actual-todos">Todos</SidebarItem>
                     <SidebarItem to="stock-bajo-minimo">Bajo del minimo</SidebarItem>
-                </SidebarSeccion>
+                </SidebarSection>
+                <SidebarSection>
+                    <SidebarTitle>Entradas y Salidas</SidebarTitle>
+                    <SidebarItem to="control-entradas-salidas">Por producto</SidebarItem>
+                </SidebarSection>
             </Sidebar>
             </PageContainer>
         </Container>
@@ -52,7 +56,7 @@ const Sidebar = styled.div`
         order: 2;
     }
 `;
-const SidebarSeccion = styled.div`
+const SidebarSection = styled.div`
     margin-bottom: 20px; 
     border-radius: 10px;
     border: 2px solid #000; 

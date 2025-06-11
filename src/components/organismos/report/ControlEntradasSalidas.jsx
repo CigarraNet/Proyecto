@@ -38,13 +38,13 @@ const styles = StyleSheet.create({
   },
 });
 
-function StockActualPorProducto() {
+function ControlEntradasSalidas() {
   const [stateListaproductos, setstateListaProductos] = useState(false);
   const currentData = new Date();
   const formattedDate = `${currentData.toLocaleDateString()} ${currentData.toLocaleTimeString()}`;
 
   const {
-    reportStockXproducto,
+    reportControlxEntredasSalidas,
     buscarProductos,
     buscador,
     setBuscador,
@@ -54,14 +54,14 @@ function StockActualPorProducto() {
 
   const { dataempresa } = useEmpresaStore();
 
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["reporte stock por producto", {
-      id_empresa: dataempresa?.id,
-      id: productosItemSelect?.id,
+  const { data } = useQuery({
+    queryKey: ["reporte control entrada salida", {
+      _id_empresa: dataempresa?.id,
+      _id_producto: productosItemSelect?.id,
     }],
-    queryFn: () => reportStockXproducto({
-      id_empresa: dataempresa?.id,
-      id: productosItemSelect?.id,
+    queryFn: () => reportControlxEntredasSalidas({
+      _id_empresa: dataempresa?.id,
+      _id_producto: productosItemSelect?.id,
     }),
     enabled: !!dataempresa?.id && !!productosItemSelect?.id,
   });
@@ -81,12 +81,24 @@ function StockActualPorProducto() {
   });
 
   const renderTableRow = (rowData, isHeader = false) => (
-    <View style={styles.row} key={rowData?.id || `${rowData.descripcion}-${rowData.stock}`}>
+    <View style={styles.row} key={rowData?.id || `${rowData.descripcion}-${rowData.fecha}`}>
       <Text style={[styles.cell, isHeader && styles.headerCell]}>
-        {rowData?.descripcion ?? "Sin nombre"}
+        {String(rowData?.nombres ?? "")}
       </Text>
       <Text style={[styles.cell, isHeader && styles.headerCell]}>
-        {rowData?.stock ?? "0"}
+        {String(rowData?.descripcion ?? "")}
+      </Text>
+      <Text style={[styles.cell, isHeader && styles.headerCell]}>
+        {String(rowData?.tipo ?? "")}
+      </Text>
+      <Text style={[styles.cell, isHeader && styles.headerCell]}>
+        {String(rowData?.cantidad ?? "")}
+      </Text>
+      <Text style={[styles.cell, isHeader && styles.headerCell]}>
+        {String(rowData?.fecha ?? "")}
+      </Text>
+      <Text style={[styles.cell, isHeader && styles.headerCell]}>
+        {String(rowData?.stock ?? "")}
       </Text>
     </View>
   );
@@ -110,18 +122,25 @@ function StockActualPorProducto() {
       )}
 
       <PDFViewer className="pdfviewer">
-        <Document title="Reporte de Stock por Producto">
-          <Page size="A4" orientation="portrait">
+        <Document title="Control Entradas y Salidas">
+          <Page size="A4" orientation="landscape">
             <View style={styles.page}>
               <View style={styles.section}>
                 <Text style={{ fontSize: 18, fontWeight: "ultrabold" }}>
-                  Stock por producto
+                  Control de entradas y salidas por producto
                 </Text>
                 <Text>
                   Fecha y hora del reporte: {formattedDate}
                 </Text>
                 <View style={styles.table}>
-                  {renderTableRow({ descripcion: "Producto", stock: "Stock" }, true)}
+                  {renderTableRow({
+                    nombres: "Usuario",
+                    descripcion: "Producto",
+                    tipo: "Tipo",
+                    cantidad: "Cantidad",
+                    fecha: "Fecha",
+                    stock: "Stock"
+                  }, true)}
                   {Array.isArray(data) && data.length > 0
                     ? data.map((item) => renderTableRow(item))
                     : <Text>No hay datos disponibles.</Text>}
@@ -144,4 +163,4 @@ const Container = styled.div`
   }
 `;
 
-export default StockActualPorProducto;
+export default ControlEntradasSalidas;

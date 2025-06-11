@@ -87,3 +87,6 @@ export * from './components/moleculas/Mensaje';
 export * from './components/moleculas/BloqueoPagina';
 export * from './components/moleculas/CardProductoSelect';
 export * from './components/organismos/report/StockActualTodos';
+export * from './components/organismos/report/StockActualPorProducto';
+export * from './components/organismos/report/StockBajoMinimo';
+export * from './components/organismos/report/ControlEntradasSalidas';

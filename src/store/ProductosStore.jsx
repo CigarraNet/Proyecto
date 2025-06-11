@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { BuscarProductos, EditarProductos,  EliminarProductos,  InsertarProductos, MostrarProductos, ReportStockProductosTodos, ReportStockXProducto } from "../index";
+import { BuscarProductos, EditarProductos,  EliminarProductos,  InsertarProductos, MostrarProductos, ReportStockProductosTodos, ReportStockXProducto, ReportStockBajoMinimo, ReportControlxEntredasSalidas } from "../index";
 export const useProductosStore = create((set,get)=>({
     buscador: "",
     setBuscador:(p)=>{
@@ -46,5 +46,13 @@ export const useProductosStore = create((set,get)=>({
     reportStockXproducto: async (p) =>{
         const response = await ReportStockXProducto(p);
         return response;
-    }
+    },
+    reportBajoMinimo: async (p) =>{
+        const response = await ReportStockBajoMinimo(p);
+        return response;
+    },
+    reportControlxEntredasSalidas: async (p) =>{
+        const response = await ReportControlxEntredasSalidas(p);
+        return response;
+    },
 }));

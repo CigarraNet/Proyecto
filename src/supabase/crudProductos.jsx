@@ -59,3 +59,19 @@ export async function ReportStockXProducto(p){
     }
     return data;
 }
+
+export async function ReportStockBajoMinimo(p) {
+    const { data, error } = await supabase.rpc("reportproductobajominimo",p)
+    if (error) {
+        return;
+        }
+    return data; 
+}
+
+export async function ReportControlxEntredasSalidas(p) {
+    const { data, error } = await supabase.rpc("mostrarcontrolxempresa",p)
+    if (error) {
+        return;
+        }
+    return data; 
+}
