@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { Btnsave, Buscador, ContentFiltro, Header, RegistrarControl, Tabs, Title,useControlStore,useMarcaStore } from "../../index";
+import { Btnsave, Buscador, ContentFiltro, Header, RegistrarControl, Tabs, Title,useControlStore, } from "../../index";
 import { useState } from "react";
 export function ControlTemplate({data}) {
   const [state, setState] = useState(false);
-  const [dataSelect, setdataSelect] = useState([]);
-  const [accion, setAccion] = useState("");
+  const [dataSelect, ] = useState([]);
+  const [accion, ] = useState("");
   const [openRegistro, SetopenRegistro] = useState(false);
   const [tipo, setTipo] = useState("");
   const nuevaentrada=()=>{

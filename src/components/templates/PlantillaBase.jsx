@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Btnsave, Header, useAuthStore } from "../../index"
+import { Header} from "../../index"
 import { useState } from "react";
 export function PlantillaBase() {
     const [state, setState] = useState(false);

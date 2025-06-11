@@ -7,7 +7,7 @@ import {
   flexRender,
 } from "@tanstack/react-table";
 import styled from "styled-components";
-import { ContentAccionesTabla, Paginacion, useMarcaStore, useUsuariosStore, variables } from "../../../index";
+import { ContentAccionesTabla, Paginacion, useUsuariosStore, variables } from "../../../index";
 import Swal from "sweetalert2";
 import { useState } from "react";
 export function TablaUsuarios({
@@ -16,7 +16,7 @@ export function TablaUsuarios({
   setdataSelect,
   setAccion,
 }) {
-  const [pagina, setPagina] = useState(1);
+  const [setPagina] = useState(1);
   const { eliminarusuarios } = useUsuariosStore();
 
   const editar = (data) => {

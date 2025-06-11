@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BannerEmpresa, Btnsave, Header, Title, useAuthStore, useEmpresaStore } from "../../index"
+import { BannerEmpresa, Btnsave, Header, Title, } from "../../index"
 import { useState } from "react";
 export function HomeTemplate() {
     const [state, setState] = useState(false);

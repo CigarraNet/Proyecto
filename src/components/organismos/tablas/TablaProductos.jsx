@@ -20,7 +20,7 @@ import { useState } from "react";
 
 export function TablaProductos({ data, SetopenRegistro, setdataSelect, setAccion }) {
   const { eliminarproductos } = useProductosStore();
-  const [pagina, setPagina] = useState(1);
+  const [ setPagina] = useState(1);
 
   const editar = (data) => {
     if (data.descripcion === "Generico") {

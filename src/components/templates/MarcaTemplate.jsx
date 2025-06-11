@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Btnsave, Buscador, ContentFiltro, Header, RegistrarMarca, TablaMarca, Title, useAuthStore, useMarcaStore, variables} from "../../index"
+import { Buscador, ContentFiltro, Header, RegistrarMarca, TablaMarca, Title,  useMarcaStore, variables} from "../../index"
 import { useState } from "react";
 import { Btnfiltro } from "../moleculas/Btnfiltro";
 export function MarcaTemplate({data}) {

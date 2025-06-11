@@ -18,7 +18,7 @@ import { useState } from "react";
 
 export function TablaMarca({ data, SetopenRegistro, setdataSelect, setAccion }) {
   const { eliminarMarca } = useMarcaStore();
-  const [pagina, setPagina] = useState(1);
+  const [setPagina] = useState(1);
 
   const editar = (data) => {
     if (data.descripcion === "Generico") {

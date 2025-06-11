@@ -19,7 +19,7 @@ import { Device } from "../../../styles/breackpoints"
 
 export function TablaControl({ data, SetopenRegistro, setdataSelect, setAccion }) {
   const { eliminarcontrol } = useControlStore();
-  const [pagina, setPagina] = useState(1);
+  const [setPagina] = useState(1);
 
   const editar = (data) => {
     if (data.descripcion === "Generico") {

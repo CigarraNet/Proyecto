@@ -19,7 +19,7 @@ import { useState } from "react";
 
 export function TablaCategorias({ data, SetopenRegistro, setdataSelect, setAccion }) {
   const { eliminarcategorias } = useCategoriasStore();
-  const [pagina, setPagina] = useState(1);
+  const [ setPagina] = useState(1);
 
   const editar = (data) => {
     if (data.descripcion === "General") {

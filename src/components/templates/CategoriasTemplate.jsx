@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Btnsave, Buscador, ContentFiltro, Header, RegistrarCategorias, TablaCategorias, Title, useAuthStore, useCategoriasStore, variables} from "../../index"
+import { Buscador, ContentFiltro, Header, RegistrarCategorias, TablaCategorias, Title, useCategoriasStore, variables} from "../../index"
 import { useState } from "react";
 import { Btnfiltro } from "../moleculas/Btnfiltro";
 export function CategoriasTemplate({data}) {
