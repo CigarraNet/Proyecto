@@ -3,7 +3,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import { Device } from "../../styles/breackpoints";
 import { TablaControl } from "../../index";
-import { data } from "react-router-dom";
 
 export function Tabs({data}) {
   const [activeTab, setActiveTab] = useState(0);

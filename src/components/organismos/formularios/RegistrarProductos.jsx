@@ -56,7 +56,7 @@ export function RegistrarProductos({ onClose, dataSelect, accion }) {
       selectMarca({id:dataSelect.idmarca,descripcion:dataSelect.marca})
       selectcategorias({id:dataSelect.id_categoria,descripcion:dataSelect.categoria})
     }
-  }, []);
+  }, [accion, dataSelect.idmarca, dataSelect.marca, dataSelect.id_categoria, dataSelect.categoria, selectMarca, selectcategorias]);
   return (
     <Container>
       <div className="sub-contenedor">

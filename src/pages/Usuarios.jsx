@@ -25,7 +25,7 @@ export function Usuarios() {
     queryFn: () => mostrarusuariosTodos({ _id_empresa: dataempresa?.id }),
     enabled: dataempresa?.id != null,
   });
-  const { data: buscardata } = useQuery({
+  useQuery({
     queryKey: [
       "buscar usuarios",
       { _id_empresa: dataempresa.id, buscador: buscador },
@@ -34,7 +34,7 @@ export function Usuarios() {
       buscarusuarios({ _id_empresa: dataempresa.id, buscador: buscador }),
     enabled: dataempresa.id != null,
   });
-  const { data: datamodulos } = useQuery({
+  useQuery({
     queryKey: ["mostrar modulos"],
     queryFn: mostrarModulos,
   });

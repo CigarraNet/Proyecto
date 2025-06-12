@@ -15,19 +15,19 @@ export function Productos() {
     enabled: !!dataempresa?.id,
   });
 
-  const { data: buscardata } = useQuery({
+  useQuery({
     queryKey: ["buscar productos", { id_empresa: dataempresa?.id, descripcion: buscador }],
     queryFn: () => buscarproductos({ _id_empresa: dataempresa?.id, buscador }),
     enabled: !!dataempresa?.id && buscador?.trim().length > 0,
   });
 
-  const { data: datamarcas } = useQuery({
+  useQuery({
     queryKey: ["mostrar marca", { id_empresa: dataempresa?.id }],
     queryFn: () => mostrarMarca({ id_empresa: dataempresa?.id }),
     enabled: !!dataempresa?.id,
   });
 
-  const { data: datacategorias } = useQuery({
+  useQuery({
     queryKey: ["mostrar categorias", { id_empresa: dataempresa?.id }],
     queryFn: () => mostrarcategorias({ id_empresa: dataempresa?.id }),
     enabled: !!dataempresa?.id,

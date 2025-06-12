@@ -40,7 +40,7 @@ export function RegistrarCategorias({ onClose, dataSelect, accion }) {
     if (accion === "Editar") {
       setColor(dataSelect.color)
     }
-  }, []);
+  }, [accion, dataSelect.color]);
   return (
     <Container>
       <div className="sub-contenedor">

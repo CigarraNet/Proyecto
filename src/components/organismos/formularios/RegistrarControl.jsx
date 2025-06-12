@@ -33,7 +33,7 @@ export function RegistrarControl({ onClose, dataSelect, accion, tipo }) {
     if (accion === "Editar") {
       // lógica futura para cargar algo
     }
-  }, []);
+  }, [accion]);
   return (
     <Container>
       <div className="sub-contenedor">

@@ -54,7 +54,7 @@ function StockActualPorProducto() {
 
   const { dataempresa } = useEmpresaStore();
 
-  const { data, isLoading, error } = useQuery({
+  const { data } = useQuery({
     queryKey: ["reporte stock por producto", {
       id_empresa: dataempresa?.id,
       id: productosItemSelect?.id,

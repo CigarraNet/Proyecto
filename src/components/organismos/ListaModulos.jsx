@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { useUsuariosStore } from "../../store/UsuariosStore";
 import { useEffect, useState } from "react";
-import { data } from "react-router-dom";
 export function ListaModulos({checkboxs,setCheckboxs,accion}) {
     const {datamodulos,datapermisosEdit} = useUsuariosStore()
-    const [isCheked, setisChecked] = useState(true);
+    const [_isCheked, _setisChecked] = useState(true);
     useEffect(()=>{
         if(accion=="Editar"){
             let allDocs = [];
@@ -21,7 +20,7 @@ export function ListaModulos({checkboxs,setCheckboxs,accion}) {
         }else{
             setCheckboxs(datamodulos)
         }
-    },[datapermisosEdit]);
+    },[datapermisosEdit, accion, datamodulos, setCheckboxs]);
     const handlecheckbox=(id)=>{
         setCheckboxs((prev)=>{
             return prev?.map((item)=>{
@@ -37,7 +36,7 @@ export function ListaModulos({checkboxs,setCheckboxs,accion}) {
     }
     const seleccionar=(e)=>{
         let check = e.target.checked;
-        setisChecked(check);
+        _setisChecked(check);
         console.log(check);
     };
     return (<Container>

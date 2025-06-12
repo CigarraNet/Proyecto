@@ -15,14 +15,14 @@ export const InsertarUsuarios = async(p)=>{
 };
 export const MostrarUsuarios = async ()=>{
     const idAuthSupabase = await ObtenerIdAuthSupabase();
-    const {error,data}= await supabase.from("usuarios").select().eq("idauth",idAuthSupabase).maybeSingle();
+    const {data}= await supabase.from("usuarios").select().eq("idauth",idAuthSupabase).maybeSingle();
     if(data){
         return data;
     }
 };
 
 export const MostrarUsuariosTodos = async (p)=>{
-    const {error,data}= await supabase.rpc("mostrarpersonal", p)
+    const {data}= await supabase.rpc("mostrarpersonal", p)
     if(data){
         return data;
     }

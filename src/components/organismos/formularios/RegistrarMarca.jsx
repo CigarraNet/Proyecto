@@ -33,7 +33,7 @@ export function RegistrarMarca({ onClose, dataSelect, accion }) {
     if (accion === "Editar") {
       // lógica futura para cargar algo
     }
-  }, []);
+  }, [accion]);
   return (
     <Container>
       <div className="sub-contenedor">

@@ -22,7 +22,7 @@ export function Categorias() {
     queryFn: () => mostrarcategorias({ id_empresa: dataempresa?.id }),
     enabled: dataempresa?.id != null,
   });
-  const { data: buscardata } = useQuery({
+  useQuery({
     queryKey: [
       "buscar categorias",
       { id_empresa: dataempresa.id, descripcion: buscador },

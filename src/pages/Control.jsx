@@ -22,10 +22,10 @@ export function Control() {
     queryFn: () => mostrarcontrol({_id_empresa: dataempresa?.id }),
     enabled: dataempresa?.id != null,
   });
-  const {data:buscarcontrollista} = useQuery({queryKey:["buscar control",{_id_empresa:dataempresa.id,buscador:buscador}],queryFn:()=>buscarcontrol({_id_empresa:dataempresa.id,buscador:buscador}),
+  useQuery({queryKey:["buscar control",{_id_empresa:dataempresa.id,buscador:buscador}],queryFn:()=>buscarcontrol({_id_empresa:dataempresa.id,buscador:buscador}),
     enabled:dataempresa.id!=null,
 });
-  const {data:buscardata} = useQuery({queryKey:["buscar productos",{id_empresa:dataempresa.id,descripcion:buscadorproductos}],queryFn:()=>buscarproductos({_id_empresa:dataempresa.id,buscador:buscadorproductos}),
+  useQuery({queryKey:["buscar productos",{id_empresa:dataempresa.id,descripcion:buscadorproductos}],queryFn:()=>buscarproductos({_id_empresa:dataempresa.id,buscador:buscadorproductos}),
     enabled:dataempresa.id!=null,
 });
   if (statePermiso == false) {

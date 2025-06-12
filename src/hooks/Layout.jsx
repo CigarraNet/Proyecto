@@ -25,10 +25,7 @@ export function Layout({ children }) {
   });
 
   // Obtener empresa (solo cuando haya ID de usuario)
-  const {
-    data: dataempresa,
-    error: errorEmpresa,
-  } = useQuery({
+  useQuery({
     queryKey: ["mostrar empresa", datausuarios?.id],
     queryFn: () => {
       if (!datausuarios?.id) return Promise.reject("ID de usuario no disponible");
@@ -38,10 +35,7 @@ export function Layout({ children }) {
   });
 
   // Obtener permisos (solo cuando haya ID de usuario en el store)
-  const {
-    data: datapermisos,
-    error: errorPermisos,
-  } = useQuery({
+  useQuery({
     queryKey: ["mostrar permisos", idusuario],
     queryFn: () => {
       if (!idusuario) return Promise.reject("ID de usuario no disponible");

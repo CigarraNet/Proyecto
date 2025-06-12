@@ -76,7 +76,7 @@ export function RegistrarUsuarios({ onClose, dataSelect, accion }) {
      setTipodoc({icono:"",descripcion:dataSelect.tipodoc})
      setTipouser({icono:"",descripcion:dataSelect.tipouser})
     }
-  }, []);
+  }, [accion, dataSelect.tipodoc, dataSelect.tipouser]);
   if (isLoading) {
     return <span>cargando...</span>;
   }
